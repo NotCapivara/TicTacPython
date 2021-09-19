@@ -37,9 +37,10 @@ def jogodavelha():
 
 while not reiniciar == 'F':
       placar()
+      jogodavelha()
       while True:
             valores = 'a1', 'a2', 'a3', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3'
-            jogodavelha()
+
 
             while True:
                   while True:
@@ -120,6 +121,9 @@ while not reiniciar == 'F':
                   print('X Player Wins')
                   px = px + 1
                   break
+            if a1 != '    ' and a2 != '    ' and a3 != '    ' and b1 != '    ' and b2 != '    ' and b3 != '    ' and c1 != '    ' and c2 != '    ' and c3 != '    ':
+                  print('Empate!')
+                  break
             while True:
                   while True:
                         opl = str(input('Player O Digite a casa correspondente: ').strip().lower())
@@ -162,6 +166,7 @@ while not reiniciar == 'F':
                               c3 = '  O '
                               break
                   digitenovamente()
+            jogodavelha()
             # Condição de Vitoria O Player
             if '  O ' in a1 and '  O ' in a2 and '  O ' in a3:
                   print('O Player Wins')
@@ -200,6 +205,7 @@ while not reiniciar == 'F':
             # Condição de Empate
             if a1 != '    ' and a2 != '    ' and a3 != '    ' and b1 != '    ' and b2 != '    ' and b3 != '    ' and c1 != '    ' and c2 != '    ' and c3 != '    ':
                   print('Empate!')
+                  break
 
       while True:
             reinicio = str(input('Deseja reiniciar [S/N]').upper())
